@@ -27,9 +27,10 @@ type Sketch struct {
 	regs       *registers
 }
 
-// New returns a HyperLogLog Sketch with 2^14 registers (precision 14)
-func New() *Sketch {
-	return New14()
+// New returns a HyperLogLog Sketch with 2^precision registers
+func New(precision uint8, sparse bool) *Sketch {
+	sk, _ := newSketch(precision, sparse)
+	return sk
 }
 
 // New14 returns a HyperLogLog Sketch with 2^14 registers (precision 14)
