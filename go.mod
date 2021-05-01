@@ -1,4 +1,4 @@
-module github.com/axiomhq/hyperloglog
+module github.com/awbuana/hyperloglog
 
 go 1.12
 
